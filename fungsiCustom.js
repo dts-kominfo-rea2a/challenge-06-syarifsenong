@@ -47,8 +47,8 @@ const bacaData = (fnCallBack) => {
         return fnCallBack(err, null);
       }
 
-      const dataResult = JSON.parse(data);
-      hasilArr.push(dataResult[0].message.split(" ")[1]);
+      const hasilJson = JSON.parse(data);
+      hasilArr.push(hasilJson[0].message.split(" ")[1]);
     }
   );
 
@@ -62,8 +62,8 @@ const bacaData = (fnCallBack) => {
         return fnCallBack(err, null);
       }
 
-      const dataResult = JSON.parse(data);
-      hasilArr.push(dataResult[0].data.message.split(" ")[1]);
+      const hasilJson = JSON.parse(data);
+      hasilArr.push(hasilJson[0].data.message.split(" ")[1]);
       fnCallBack(null, hasilArr);
     }
   );
